@@ -1,0 +1,49 @@
+name= "Mr.Cena"
+if len(name)>0:
+    new_message=" Yay ! name is not empty"
+    print new_message
+
+    if len(" ")> 0:
+        print " This is just the start on line 7"
+        print " and it continues on line 2"
+
+if len("python")>0:
+    print "Not a reply comment"
+    print "Comment on original post"
+    print " See how the line matches with line 3 and line 4"
+
+print "Outside statement"
+print "New comment"
+
+spy_name=raw_input("welcome to spy chat,tell me your spy name first:")
+if len(spy_name)>0:
+    #Start writing it from here now.
+    print 'Welcome' + " "+ spy_name +" " + 'Glad to have you with us!'
+    spy_salutation=raw_input("Mr or Miss?:")
+    spy_name =spy_salutation +" " +spy_name
+    print "Cool" +" "+ spy_salutation +" " + spy_name +" " + "Lets give each other a chance!"
+    #Duck typing
+    spy_age=0
+    spy_rating=0.0
+    spy_is_online= False
+    spy_age=input("What is your age?")
+    if spy_age>15 and spy_age<50:
+        print "You are eligible to be a spy!"
+        spy_rating = input("What is your spy rating?")
+        if  spy_rating> 4.5:
+            print "Lage Raho!"
+        elif spy_rating>3.5 and spy_rating<=4.5:
+            print "Go ahead Man!"
+        elif spy_rating>=2.5 and spy_rating<=3.5:
+            print "You can do better !"
+        else:
+            print "We are always ready to help you !"
+        spy_is_online= True
+        print "Authentication complete. Welcome "+ spy_name+ "age: "+ str(spy_age) + "and rating of:"+ str(spy_rating)+" "+ "Happy to have you onboard"
+
+    else:
+     print ("Better Luck next time!")
+
+else:
+    print("You have not entered a valid name dude!")
+
