@@ -1,0 +1,57 @@
+from Spy_detail import spy_name,spy_salutation, spy_rating, spy_age, spy_is_online
+#Time to code
+#Starting the spychat application
+#Welcome Spy to our app
+print "Importing done...Lets Start!"
+#Asking to continue as default user
+question= "Do you wish to continue as"+ spy_salutation+ " "+ spy_name+ "(Y/ N)?"
+existing= raw_input(question)
+#function starts
+def start_to_chat(spy_name,spy_age, spy_rating):
+    current_status = None
+    spy_name =spy_salutation+" "+spy_name
+    if spy_age > 15 and spy_age < 50:
+        print "Authentication complete. Welcome " + spy_name + "age: " + str(spy_age) + "and rating of:" + str(
+            spy_rating) + " " + "Happy to have you onboard"
+        display_menu=True
+        while display_menu:
+            menu_choices = "What do you wish to do? \n 1. Add a status update \n 2. Add your friend spy \n  3. Read the Chats from a user \n 4. Close my Application \n"
+            menu_choice = raw_input(menu_choices)
+            if len(menu_choice) > 0:
+                menu_choice = int(menu_choice)
+
+                if menu_choice == 1:
+                   print "Add your current status"
+                elif menu_choice == 2:
+                 print "Add your friend"
+                elif menu_choice == 3:
+                 print "Read the Chat"
+
+
+                else:
+                    show_menu = False
+            else:
+                print 'Sorry you are not of the correct age to be a spy'
+if existing == "Y":
+                    start_to_chat(spy_name, spy_age, spy_rating)
+else:
+                    spy_name = ''
+                    spy_salutation = ''
+                    spy_age = 0
+                    spy_rating = 0.0
+                    spy_is_online = False
+
+spy_name=raw_input("welcome to spy chat,tell me your spy name first:")
+if len(spy_name) > 0:
+        spy_salutation = input("Should I call you Mr. or Ms.?: ")
+
+        spy_age = input("What is your age?")
+
+        spy_rating = input("What is your spy rating?")
+
+        spy_is_online = True
+
+        start_to_chat(spy_name, spy_age, spy_rating)
+else:
+        print 'Please add a valid spy name'
+
